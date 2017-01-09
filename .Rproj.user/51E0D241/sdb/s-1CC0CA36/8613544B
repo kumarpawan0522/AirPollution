@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "\nobsFileName <- function(directory, obs) {\n  \n  filename <- character(length(obs))\n  for(i in 1:length(obs))\n  {\n    if (obs[i]<10) {\n      filename[i] = paste(directory, \"/\",\"00\", obs[i], \".csv\", sep=\"\")\n    } else if (obs[i] >= 10 && obs[i] < 100) {\n      filename[i] = paste(directory, \"/\", \"0\", obs[i], \".csv\", sep=\"\")\n    } else {\n      filename[i] = paste(directory, \"/\", obs[i], \".csv\", sep=\"\")\n    }\n  }\n  return(filename)\n}\n",
+    "created" : 1483943861690.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2961271588",
+    "id" : "8613544B",
+    "lastKnownWriteTime" : 1483944003,
+    "last_content_update" : 1483944003513,
+    "path" : "C:/Users/Pawan/Anaconda3/Data Analysis/R/Coursera R/Coursera R/Air Pollution/Air Pollution/ObsPath.R",
+    "project_path" : "ObsPath.R",
+    "properties" : {
+        "tempName" : "Untitled4"
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

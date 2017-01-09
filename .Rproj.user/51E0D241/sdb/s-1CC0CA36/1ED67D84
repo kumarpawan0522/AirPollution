@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "corr <- function(directory, threshold = 0) {\n  \n  source(\"complete.R\")\n  \n  observations <- complete(directory, 1:332)\n  \n  result <- numeric()\n  \n  for (i in observations$id[observations$nobs > threshold]){\n    filename <- obsFileName(directory, i)\n    data <- read.csv(filename)\n    result <- c(result, cor(data$sulfate, data$nitrate, use=\"complete.obs\"))\n  }\n  result\n}",
+    "created" : 1483943850727.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "652642249",
+    "id" : "1ED67D84",
+    "lastKnownWriteTime" : 1483944189,
+    "last_content_update" : 1483944189150,
+    "path" : "C:/Users/Pawan/Anaconda3/Data Analysis/R/Coursera R/Coursera R/Air Pollution/Air Pollution/corr.R",
+    "project_path" : "corr.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

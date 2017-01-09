@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "pollutantmean <- function(directory, pollutant, id = 1:332) {\n  \n  source(\"ObsPath.R\")\n  allData <- numeric()\n  \n  for (i in id) {\n    filename <- obsFileName(directory, i)\n    \n    data <- read.csv(filename)\n    \n    if (pollutant == \"sulfate\") {\n      allData <- c(allData, data$sulfate)\n    } else if (pollutant == \"nitrate\") {\n      allData <- c(allData, data$nitrate)\n    }\n  }\n  \n  mean(allData, na.rm=TRUE)\n}",
+    "created" : 1483943858033.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1397273577",
+    "id" : "E80E4FD0",
+    "lastKnownWriteTime" : 1483944096,
+    "last_content_update" : 1483944096954,
+    "path" : "C:/Users/Pawan/Anaconda3/Data Analysis/R/Coursera R/Coursera R/Air Pollution/Air Pollution/Pollutantmean.R",
+    "project_path" : "Pollutantmean.R",
+    "properties" : {
+        "tempName" : "Untitled3"
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

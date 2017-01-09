@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "complete <- function(directory, id = 1:332) {\n  \n  \n  comp <- data.frame(id=numeric(), nobs=numeric())\n  \n  for (i in id) {\n    filename <- obsFileName(directory, i)\n    data <- read.csv(filename)\n    #comp <- rbind(comp, data.frame(id=i, nobs=nrow(data[complete.cases(data), ])))\n    v <-  complete.cases(data)\n    \n    \n    comp <- rbind(comp, data.frame(id=i, nobs=length(v[v==TRUE])))\n  }\n  \n  comp\n}\n",
+    "created" : 1483943853913.000,
+    "dirty" : true,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2913625736",
+    "id" : "8D955642",
+    "lastKnownWriteTime" : 1483944137,
+    "last_content_update" : 1483944263819,
+    "path" : "C:/Users/Pawan/Anaconda3/Data Analysis/R/Coursera R/Coursera R/Air Pollution/Air Pollution/complete.R",
+    "project_path" : "complete.R",
+    "properties" : {
+        "tempName" : "Untitled2"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
